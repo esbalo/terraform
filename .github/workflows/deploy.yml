@@ -19,7 +19,7 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: '02708a96-fbb3-4be0-9364-bc4df6ff2ae0'
           ARM_TENANT_ID: 'dd9c0280-271b-4e10-914d-03b3d717a7bb'
-          args: -backend-config="token=${{ secrets.TF_API_TOKEN }}"
+          args: "-backend-config=\"token=${{ secrets.TF_API_TOKEN }}\""
           TF_WORKSPACE: dev
       - name: 'Terraform Apply'
         uses: hashicorp/terraform-github-actions@master
@@ -32,5 +32,5 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: '02708a96-fbb3-4be0-9364-bc4df6ff2ae0'
           ARM_TENANT_ID: 'dd9c0280-271b-4e10-914d-03b3d717a7bb'
-          args: -backend-config="token=${{ secrets.TF_API_TOKEN }}"
+          args: "-backend-config=\"token=${{ secrets.TF_API_TOKEN }}\""
           TF_WORKSPACE: dev
